@@ -1,0 +1,71 @@
+{
+  "name": "threshold-gulpify-bb",
+  "version": "0.0.1",
+  "description": "The all-encompassing starting point for my front end dev projects using Gulp and Browserify with Backbone.",
+  "author": "Matt Przybylski <matt@reintroducing.com>",
+  "main": "js/app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reintroducing/threshold-gulpify-bb.git"
+  },
+  "keywords": [
+    "matt przybylski",
+    "threshold",
+    "gulp",
+    "html",
+    "css",
+    "js",
+    "javascript",
+    "front end",
+    "backbone",
+    "underscore"
+  ],
+  "browserify": {
+    "transform": [
+      "browserify-shim",
+      "node-underscorify"
+    ]
+  },
+  "browser": {
+    "jquery": "./node_modules/jquery/dist/jquery.js",
+    "underscore": "./node_modules/lodash/dist/lodash.underscore.js",
+    "backbone": "./node_modules/backbone/backbone.js"
+  },
+  "browserify-shim": {
+    "jquery": "$",
+    "underscore": "_",
+    "backbone": {
+      "depends": [
+        "jquery",
+        "underscore:_"
+      ],
+      "exports": "Backbone"
+    }
+  },
+  "devDependencies": {
+    "backbone": "^1.1.2",
+    "backbone-relational": "^0.8.8",
+    "browser-sync": "^1.5.2",
+    "browserify": "^5.10.1",
+    "browserify-shim": "^3.7.0",
+    "del": "^0.1.2",
+    "gulp": "^3.8.7",
+    "gulp-autoprefixer": "^1.0.0",
+    "gulp-compass": "^1.3.1",
+    "gulp-if": "^1.2.4",
+    "gulp-jshint": "^1.8.4",
+    "gulp-notify": "^1.5.0",
+    "gulp-uglify": "^0.3.2",
+    "gulp-usemin": "^0.3.8",
+    "gulp-util": "^3.0.1",
+    "gulp-watch": "^1.0.2",
+    "jquery": "^2.1.1",
+    "jshint-stylish": "^0.1.5",
+    "lodash": "^2.4.1",
+    "node-underscorify": "0.0.11",
+    "require-dir": "^0.1.0",
+    "run-sequence": "^0.3.6",
+    "vinyl-source-stream": "^0.1.1",
+    "watchify": "^1.0.2"
+  }
+}

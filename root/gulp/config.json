@@ -1,0 +1,10 @@
+{
+    "dist": "_dist",
+    "dev": "./",
+    "css": "css",
+    "sass": "sass",
+    "js": "js",
+    "data": "data",
+    "img": "images",
+    "compassSprites": "sprite"
+}

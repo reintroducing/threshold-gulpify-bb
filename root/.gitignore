@@ -1,0 +1,10 @@
+*.DS_Store
+.sass-cache
+.tmp
+.ftppass
+_internal
+_dist
+npm-debug.log
+node_modules
+css/main.css
+js/main.js
