@@ -12,7 +12,7 @@ gulp.task('compass-prod', function() {
         gutil.log(gutil.colors.magenta('main.css deleted for re-creation using production mode.'));
     });
 
-    gulp.src(config.sass + '/**/*.scss')
+    return gulp.src(config.sass + '/**/*.scss')
         .pipe(compass({
             config_file: 'config.rb',
             environment: 'production'
