@@ -2,7 +2,8 @@
 
 var gulp = require('gulp'),
     config = require('../config.json'),
-    jshint = require('gulp-jshint');
+    jshint = require('gulp-jshint'),
+    handleErrors = require('../utils/handle-errors');
 
 gulp.task('lint', function() {
     return gulp.src([
@@ -12,5 +13,7 @@ gulp.task('lint', function() {
             '!' + config.js + '/**/*.min.js'
         ])
         .pipe(jshint('.jshintrc'))
-        .pipe(jshint.reporter('jshint-stylish'));
+        .pipe(jshint.reporter('jshint-stylish'))
+        .pipe(jshint.reporter('fail'))
+        .on('error', handleErrors);
 });
