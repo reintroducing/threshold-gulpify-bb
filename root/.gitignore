@@ -8,3 +8,4 @@ npm-debug.log
 node_modules
 css/main.css
 js/main.js
+js/main.js.map
