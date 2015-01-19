@@ -8,9 +8,7 @@ gulp.task('copy', function() {
             config.img + '/**',
             config.css + '/fonts/**',
             '.favicon.ico',
-            '.htaccess',
-            '!node_modules/**',
-            '!_internal/**'
+            '.htaccess'
         ], {base: '.'})
         .pipe(gulp.dest(config.dist));
 });

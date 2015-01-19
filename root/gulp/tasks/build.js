@@ -6,8 +6,7 @@ var gulp = require('gulp'),
 gulp.task('build', function(cb) {
     runSequence([
             'clean',
-            'compass-prod',
-            'lint'
+            'compass-prod'
         ],
         'browserify',
         'usemin',
