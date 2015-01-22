@@ -1,4 +1,4 @@
 'use strict';
 
-var Router = require('./router/router'),
+var Router = require('./routers/router'),
     router = new Router();
