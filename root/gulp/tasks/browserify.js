@@ -12,8 +12,6 @@ var gulp = require('gulp'),
     handleErrors = require('../utils/handle-errors');
 
 gulp.task('browserify', function() {
-    gulp.start('lint');
-
     var bundler = browserify(config.dev + config.js + '/app.js', watchify.args),
         bundle = function() {
             return bundler
