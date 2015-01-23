@@ -6,9 +6,8 @@ var gulp = require('gulp'),
 gulp.task('default', function(cb) {
     global.isWatching = true;
 
-    runSequence([
-            'compass-dev'
-        ],
+    runSequence(
+        'compass-dev',
         'browser-sync',
         'watch',
         cb);
