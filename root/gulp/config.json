@@ -6,5 +6,5 @@
     "js": "js",
     "data": "data",
     "img": "images",
-    "compassSprites": "sprite"
+    "sprites": "sprites"
 }

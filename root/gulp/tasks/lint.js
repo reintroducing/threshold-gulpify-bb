@@ -9,7 +9,7 @@ gulp.task('lint', function() {
     return gulp.src([
             config.js + '/**/*.js',
             '!' + config.js + '/libs/**/*.js',
-            '!' + config.js + '/main.js',
+            '!' + config.js + '/bundle.js',
             '!' + config.js + '/**/*.min.js'
         ])
         .pipe(jshint('.jshintrc'))

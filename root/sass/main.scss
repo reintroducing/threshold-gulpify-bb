@@ -5,14 +5,7 @@
 \* ----------------------------------------------------------------------------- */
 
 * {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
-}
-
-::-moz-selection {
-    background: rgba(179, 212, 252, 1);
-    text-shadow: none;
 }
 
 ::selection {
@@ -54,6 +47,21 @@ hr {
     padding: 0;
 }
 
+p,
+ol,
+ul,
+blockquote,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+
 /* ----------------------------------------------------------------------------- *\
    UTILITIES
 \* ----------------------------------------------------------------------------- */
@@ -92,11 +100,14 @@ hr {
 \* ----------------------------------------------------------------------------- */
 
 html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     overflow-y: scroll;
 }
 
 body {
-    font: normal 1em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    @include font-family("Helvetica");
+    @include font-size($base-font-size);
     color: $color-primary;
     line-height: 1.4;
 }
@@ -111,6 +122,8 @@ h3,
 h4,
 h5,
 h6 {
+    margin: 0;
+    padding: 0;
     line-height: 1.2;
 }
 

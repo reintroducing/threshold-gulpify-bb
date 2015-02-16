@@ -8,6 +8,7 @@ gulp.task('browser-sync', function() {
     browserSync({
         server: {
             baseDir: config.dev
-        }
+        },
+        notify: false
     });
 });

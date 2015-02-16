@@ -7,8 +7,8 @@ gulp.task('default', function(cb) {
     global.isWatching = true;
 
     runSequence(
-        'compass-dev',
-        'browser-sync',
+        'sass',
         'watch',
+        'browser-sync',
         cb);
 });
