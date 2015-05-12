@@ -7,5 +7,6 @@ _dist
 npm-debug.log
 node_modules
 css/main.css
-js/main.js
-js/main.js.map
+css/main.css.map
+js/bundle.js
+js/bundle.js.map
